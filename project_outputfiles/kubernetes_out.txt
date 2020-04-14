@@ -1,0 +1,26 @@
+pod/machinelearningapp created
+NAME                 READY   STATUS    RESTARTS   AGE
+machinelearningapp   0/1     Pending   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+❯ bash run_kubernetes.sh
+Error from server (AlreadyExists): pods "machinelearningapp" already exists
+NAME                 READY   STATUS    RESTARTS   AGE
+machinelearningapp   1/1     Running   0          13s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+# Output of ./makeprediction.sh
+
+❯ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
